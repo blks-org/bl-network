@@ -65,7 +65,7 @@ python -m bl.node \
   --port 7001 --api-port 8001
 ```
 
-После запуска открой `http://localhost:8001/status` — увидишь `height`, который растёт.
+После запуска откройте `http://localhost:8001/status` — увидите `height`, который растёт.
 
 ## Запуск сети из 3 узлов (VDS)
 
@@ -75,7 +75,7 @@ python -m bl.node \
 python -m bl.tools 3 --out genesis
 ```
 
-Скопируй `genesis/genesis.json` на **все** серверы, а `validator-{0,1,2}.priv` — по одному на каждый.
+Скопируйте `genesis/genesis.json` на **все** серверы, а `validator-{0,1,2}.priv` — по одному на каждый.
 
 **На каждом сервере:**
 
@@ -112,11 +112,11 @@ python -m bl.wallet faucet --file me.json
 # 3. Застейкать минимум 100 BLC
 python -m bl.wallet stake --file me.json --amount 100
 
-# 4. Проверить, что ты в списке активных валидаторов
+# 4. Проверить, что вы в списке активных валидаторов
 curl http://localhost:8001/validators
 ```
 
-> **Важно:** чтобы создавать блоки, твой адрес должен быть в `genesis.json`. В текущей версии нет автоматического голосования за добавление новых валидаторов — это есть в Roadmap.
+> **Важно:** чтобы создавать блоки, ваш адрес должен быть в `genesis.json`. В текущей версии нет автоматического голосования за добавление новых валидаторов — это есть в Roadmap.
 
 ## Смарт-контракты
 
@@ -171,7 +171,7 @@ python -m bl.wallet auction-start --file me.json --name cool --bid 100
 python -m bl.wallet auction-bid --file me.json --name cool --bid 105
 # подождать 3 минуты
 python -m bl.wallet auction-settle --file me.json --name cool
-# если тебя перебили — забрать refund:
+# если вас перебили — забрать refund:
 python -m bl.wallet auction-refund --file me.json --name cool
 ```
 
